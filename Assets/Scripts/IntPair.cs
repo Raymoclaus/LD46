@@ -42,6 +42,10 @@ namespace CustomDataTypes
 			}
 		}
 
+		public static bool IsAdjacentTo(IntPair a, IntPair b) => GetManhattanDistance(a, b) == 1;
+
+		public static int GetManhattanDistance(IntPair a, IntPair b) => Mathf.Abs(a.x - b.x) + Mathf.Abs(a.y - b.y);
+
 		public override string ToString() => $"({x}, {y})";
 
 		public static bool TryParse(string toParse, out IntPair result)
